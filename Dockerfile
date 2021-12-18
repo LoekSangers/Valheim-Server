@@ -38,8 +38,5 @@ RUN chmod +x entrypoint.sh
 ADD install_valheim.sh .
 RUN chmod +x install_valheim.sh && ./install_valheim.sh
 
-RUN export LD_LIBRARY_PATH=/root/valheim/linux64/:/root/.steam/steamcmd/linux64/:$LD_LIBRARY_PATH \
- && export SteamAppID=892970
-
 # Set default command
 ENTRYPOINT ["./entrypoint.sh"]
